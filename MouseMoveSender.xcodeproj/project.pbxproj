@@ -11,6 +11,11 @@
 		BF03DE901F566BBF00FE7B2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03DE8F1F566BBF00FE7B2D /* ViewController.swift */; };
 		BF03DE921F566BBF00FE7B2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF03DE911F566BBF00FE7B2D /* Assets.xcassets */; };
 		BF03DE951F566BBF00FE7B2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF03DE931F566BBF00FE7B2D /* Main.storyboard */; };
+		BF8954931F5E8BB10064685C /* MouseInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8954911F5E8BB10064685C /* MouseInfoViewController.swift */; };
+		BF8954941F5E8BB10064685C /* MouseInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF8954921F5E8BB10064685C /* MouseInfoViewController.xib */; };
+		BFE319E41F60DB4500780FE3 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE319E31F60DB4500780FE3 /* CocoaAsyncSocket.framework */; };
+		BFE319E71F60DC3400780FE3 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE319E61F60DC3400780FE3 /* SocketManager.swift */; };
+		BFE43FD81F5F96E0001CBA7E /* MouseInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE43FD71F5F96E0001CBA7E /* MouseInfoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		BF03DE911F566BBF00FE7B2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF03DE941F566BBF00FE7B2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF03DE961F566BBF00FE7B2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF8954911F5E8BB10064685C /* MouseInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MouseInfoViewController.swift; sourceTree = "<group>"; };
+		BF8954921F5E8BB10064685C /* MouseInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MouseInfoViewController.xib; sourceTree = "<group>"; };
+		BFE319E31F60DB4500780FE3 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		BFE319E61F60DC3400780FE3 /* SocketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
+		BFE43FD71F5F96E0001CBA7E /* MouseInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MouseInfoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE319E41F60DB4500780FE3 /* CocoaAsyncSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +49,7 @@
 			children = (
 				BF03DE8C1F566BBF00FE7B2D /* MouseMoveSender */,
 				BF03DE8B1F566BBF00FE7B2D /* Products */,
+				BFE319E21F60DB4500780FE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,13 +64,25 @@
 		BF03DE8C1F566BBF00FE7B2D /* MouseMoveSender */ = {
 			isa = PBXGroup;
 			children = (
+				BF8954911F5E8BB10064685C /* MouseInfoViewController.swift */,
+				BF8954921F5E8BB10064685C /* MouseInfoViewController.xib */,
 				BF03DE8D1F566BBF00FE7B2D /* AppDelegate.swift */,
+				BFE319E61F60DC3400780FE3 /* SocketManager.swift */,
+				BFE43FD71F5F96E0001CBA7E /* MouseInfoModel.swift */,
 				BF03DE8F1F566BBF00FE7B2D /* ViewController.swift */,
 				BF03DE911F566BBF00FE7B2D /* Assets.xcassets */,
 				BF03DE931F566BBF00FE7B2D /* Main.storyboard */,
 				BF03DE961F566BBF00FE7B2D /* Info.plist */,
 			);
 			path = MouseMoveSender;
+			sourceTree = "<group>";
+		};
+		BFE319E21F60DB4500780FE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFE319E31F60DB4500780FE3 /* CocoaAsyncSocket.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,6 +95,7 @@
 				BF03DE861F566BBF00FE7B2D /* Sources */,
 				BF03DE871F566BBF00FE7B2D /* Frameworks */,
 				BF03DE881F566BBF00FE7B2D /* Resources */,
+				BFE319E51F60DB6F00780FE3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -123,10 +148,28 @@
 			files = (
 				BF03DE921F566BBF00FE7B2D /* Assets.xcassets in Resources */,
 				BF03DE951F566BBF00FE7B2D /* Main.storyboard in Resources */,
+				BF8954941F5E8BB10064685C /* MouseInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BFE319E51F60DB6F00780FE3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/CocoaAsyncSocket.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BF03DE861F566BBF00FE7B2D /* Sources */ = {
@@ -134,7 +177,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF03DE901F566BBF00FE7B2D /* ViewController.swift in Sources */,
+				BFE43FD81F5F96E0001CBA7E /* MouseInfoModel.swift in Sources */,
+				BF8954931F5E8BB10064685C /* MouseInfoViewController.swift in Sources */,
 				BF03DE8E1F566BBF00FE7B2D /* AppDelegate.swift in Sources */,
+				BFE319E71F60DC3400780FE3 /* SocketManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,8 +296,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7LHSW9VBV8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = MouseMoveSender/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = cmlab.MouseMoveSender;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -264,8 +315,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7LHSW9VBV8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = MouseMoveSender/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = cmlab.MouseMoveSender;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -291,6 +347,7 @@
 				BF03DE9B1F566BBF00FE7B2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
