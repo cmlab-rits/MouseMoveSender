@@ -11,7 +11,7 @@ import IOKit
 
 class MouseInfoModel: NSObject {
     var ipAddress: String = "192.168.2.128"
-    var port: UInt16? = 11999
+    var port: UInt16? = 9900
     var dx: Int? = nil
     var dy: Int? = nil
 }
